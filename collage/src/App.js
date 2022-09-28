@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header";
+import Intro from "./components/Intro/Intro";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 const theme = createTheme({
     palette: {
@@ -23,6 +25,8 @@ const theme = createTheme({
       fontFamily: [
         'IBM Plex Mono',
         "monospace",
+        'Montserrat',
+        'sans-serif',
         'Tiro Telugu',
         'serif',
         '-apple-system',
@@ -43,7 +47,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
-      <Header/>
+      <Intro/>
+      {/* <Header/> */}
       </>
     </ThemeProvider>
   );
