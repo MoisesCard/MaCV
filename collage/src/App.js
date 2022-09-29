@@ -1,6 +1,8 @@
-import Header from "./components/Header/Header";
-import Intro from "./components/Intro/Intro";
+
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {BrowserRouter as Router} from "react-router-dom"
+import AnimatedRoutes from "./components/AnimatedRoutes";
+
 
 
 const theme = createTheme({
@@ -46,10 +48,9 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <>
-      <Intro/>
-      {/* <Header/> */}
-      </>
+      <Router>
+        <AnimatedRoutes/>
+      </Router>
     </ThemeProvider>
   );
 }
